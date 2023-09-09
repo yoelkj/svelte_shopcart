@@ -8,8 +8,11 @@
     //import Products from "./pages/Products.svelte";
     //import ProductTemplate from "./pages/ProductTemplate.svelte";
 
+    import Hero from "../components/Hero.svelte";
     
 </script>
 
-<h1>Welcome to SvelteKit</h1>
+<Hero>
+    <a href="/products" class="btn btn-primary btn-hero">Shop now</a>
+</Hero>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
