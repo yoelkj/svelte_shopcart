@@ -3,7 +3,6 @@
     const {title, image, price, id} = product;
 </script>
 
-
 <article class="product">
     <div class="img-container">
         <img src="{image}" alt="{title}">

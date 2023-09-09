@@ -9,10 +9,15 @@
     //import ProductTemplate from "./pages/ProductTemplate.svelte";
 
     import Hero from "../components/Hero.svelte";
+    import Featured from "../components/Products/Featured.svelte";
     
 </script>
 
 <Hero>
     <a href="/products" class="btn btn-primary btn-hero">Shop now</a>
 </Hero>
+
+<Featured title="Featured products" />
+
+    
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
