@@ -8,10 +8,6 @@
     
     //Props
     export let title = "";
-
-    //let featured = $products.filter(item => item.featured === true);
-    //$: featured =  $products.filter(item=> item.featured===true) 
-    
     
 </script>
 
