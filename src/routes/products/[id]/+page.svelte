@@ -1,14 +1,16 @@
 <script>
 
     //Data
-    import products from "../../../stores/defaultProducts";
     import { page } from '$app/stores';
+    
+    import products from "../../../stores/defaultProducts";
     
     //Components
     import Loading from "../../../components/Loading.svelte";
 
     //Global store
     import globalStore from "../../../stores/globalStore"
+  import { addToCart } from '../../../stores/cartStore';
 
     const productId = $page.params.id;
 
@@ -41,6 +43,8 @@
                 <h1>{product.price}</h1>
                 <p>{product.description}</p>
                 <button class="btn btn-primary" on:click={() => {
+                    
+                    addToCart(product);
                     globalStore.toggleItem('cart', true)
 
                 }} >

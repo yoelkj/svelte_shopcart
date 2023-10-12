@@ -1,10 +1,13 @@
 <script>
-  import { blur, fade, fly } from 'svelte/transition';
+    
+    import { blur, fade, fly } from 'svelte/transition';
     import globalStore from '../../stores/globalStore'
+    import ItemsList from './ItemsList.svelte';
 
-    let user = false;
+    import user from '../../stores/userStore';
 
 </script>
+
 <div class="cart-overlay" transition:blur>
     <div class="cart-container" transition:fly={{x:100}}>
         <div class="cart" transition:fade={{delay:400}}>
@@ -21,6 +24,37 @@
                 <span />
             </div>
             <!--END cart header-->
+            <ItemsList></ItemsList>
+
+            <!--Cart items-->
+            <!--END cart items-->
+
+
+            <!--Cart footer-->
+            <div class="cart-login">
+                
+                {#if $user.jwt }
+                    <a href="/checkout" 
+                       class="btn btn-primary btn-block"
+                       on:click={() => {
+                        globalStore.toggleItem('cart', false)
+                       }}   
+                       >Checkout</a>
+                {:else}
+                    <p>
+                        In order to checkout please 
+                        <a href="/login" 
+                        class=""
+                        on:click={() => {
+                            globalStore.toggleItem('cart', false)
+                        }}   
+                        >Login</a>
+                    </p>
+                
+                {/if}
+
+            </div>
+            <!--END cart footer-->
 
         </div>
     </div>

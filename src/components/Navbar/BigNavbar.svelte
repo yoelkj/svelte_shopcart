@@ -1,6 +1,7 @@
 <script>
   import CartButton from "../Cart/CartButton.svelte";
   import links from "../../constants/links";
+  import LoginLink from "../LoginLink.svelte";
   console.log(links);
 </script>
 <nav class="navbar">
@@ -21,6 +22,7 @@
             </a>
             
             <div class="nav-aside">
+                <LoginLink></LoginLink>
                 <CartButton></CartButton>
             </div>
         </div>

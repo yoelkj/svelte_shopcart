@@ -2,6 +2,10 @@
   import { fade, fly } from "svelte/transition";
     import links from "../../constants/links";
     import globalStore from "../../stores/globalStore"
+
+
+    import LoginLink from "../LoginLink.svelte";
+
     let openSidebar = globalStore.toggleItem
 </script>
 
@@ -24,6 +28,9 @@
                     console.log('Sidebar close');
                 }} href="{navLink.link}">{navLink.text}</a></li>
             {/each}
+            <li>
+                <LoginLink></LoginLink>
+            </li>
         </ul>
 
     </div>
