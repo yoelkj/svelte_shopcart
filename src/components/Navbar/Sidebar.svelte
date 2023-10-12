@@ -25,7 +25,7 @@
         <ul class="sidebar-links">
             {#each links as navLink}
                 <li><a on:click={() =>{
-                    console.log('Sidebar close');
+                    openSidebar('sidebar', !$globalStore.sidebar);
                 }} href="{navLink.link}">{navLink.text}</a></li>
             {/each}
             <li>
