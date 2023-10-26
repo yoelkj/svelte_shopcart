@@ -3,7 +3,7 @@
     //Data
     import { page } from '$app/stores';
     
-    import products from "../../../stores/defaultProducts";
+    import products from "../../../stores/products";
     
     //Components
     import Loading from "../../../components/Loading.svelte";

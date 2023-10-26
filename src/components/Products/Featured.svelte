@@ -1,7 +1,7 @@
 <script>
     
     //Data
-    import products, {featuredStore} from "../../stores/defaultProducts";
+    import products, {featuredStore} from "../../stores/products";
     //Components    
     import Product from "./Product.svelte";
     import Loading from "../Loading.svelte";
